@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,17 @@
     <meta name="description" content="Horn of Africa Botanicals sources premium frankincense from Somaliland for international fragrance, cosmetic and personal-care markets.">
 
     <style>
+        :root {
+            --forest: #10391E;
+            --forest-dark: #0B2815;
+            --gold: #C29322;
+            --gold-light: #D9B451;
+            --ivory: #F9F7F0;
+            --sand: #E9D8B0;
+            --text: #10391E;
+            --muted: #555E50;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -21,8 +33,8 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            color: #10391E;
-            background: #F9F7F0;
+            color: var(--text);
+            background: var(--ivory);
             line-height: 1.6;
         }
 
@@ -31,8 +43,8 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(248, 246, 240, 0.96);
-            border-bottom: 1px solid #ddd8ca;
+            background: rgba(249, 247, 240, 0.97);
+            border-bottom: 1px solid var(--sand);
         }
 
         .nav {
@@ -48,21 +60,23 @@
             font-size: 20px;
             font-weight: 700;
             letter-spacing: 1.5px;
+            color: var(--forest);
         }
 
         .logo span {
-            color: #C29322;
+            color: var(--gold);
         }
 
         nav a {
             text-decoration: none;
-            color: #25251f;
+            color: var(--forest);
             margin-left: 28px;
             font-size: 14px;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: #C29322;
+            color: var(--gold);
         }
 
         .hero {
@@ -73,10 +87,13 @@
             text-align: center;
             padding: 120px 25px 80px;
             background:
-                linear-gradient(rgba(20,18,12,0.62), rgba(20,18,12,0.62)),
+                linear-gradient(
+                    rgba(10, 45, 23, 0.86),
+                    rgba(16, 57, 30, 0.82)
+                ),
                 url("https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=2000&q=85")
                 center/cover;
-            color: white;
+            color: var(--ivory);
         }
 
         .hero-content {
@@ -87,6 +104,7 @@
             letter-spacing: 4px;
             text-transform: uppercase;
             font-size: 12px;
+            color: var(--gold-light);
         }
 
         .hero h1 {
@@ -95,28 +113,31 @@
             line-height: 1;
             margin: 25px 0;
             font-weight: 400;
+            color: var(--ivory);
         }
 
         .hero p {
             max-width: 650px;
             margin: auto;
             font-size: 19px;
-            color: #eee;
+            color: #F0EBD9;
         }
 
         .button {
             display: inline-block;
             margin-top: 35px;
             padding: 15px 30px;
-            background: #C29322;
-            color: white;
+            background: var(--gold);
+            color: var(--forest-dark);
             text-decoration: none;
             letter-spacing: 1px;
             font-size: 13px;
+            font-weight: 700;
+            transition: background 0.3s ease;
         }
 
         .button:hover {
-            background: #8b6d2b;
+            background: var(--gold-light);
         }
 
         section {
@@ -135,9 +156,10 @@
         }
 
         .section-title small {
-            color: #9b7a32;
+            color: #94701A;
             letter-spacing: 3px;
             text-transform: uppercase;
+            font-weight: 700;
         }
 
         .section-title h2 {
@@ -145,14 +167,15 @@
             font-size: 48px;
             font-weight: 400;
             margin: 15px 0;
+            color: var(--forest);
         }
 
         .section-title p {
-            color: #666358;
+            color: var(--muted);
         }
 
         .about {
-            background: #F9F7F0;
+            background: var(--ivory);
         }
 
         .about-grid {
@@ -165,7 +188,10 @@
         .about-image {
             min-height: 500px;
             background:
-                linear-gradient(rgba(20,20,15,0.15), rgba(20,20,15,0.15)),
+                linear-gradient(
+                    rgba(16, 57, 30, 0.15),
+                    rgba(16, 57, 30, 0.15)
+                ),
                 url("https://images.unsplash.com/photo-1515446134809-993c501ca304?auto=format&fit=crop&w=1200&q=80")
                 center/cover;
         }
@@ -175,15 +201,16 @@
             font-size: 36px;
             font-weight: 400;
             margin-bottom: 20px;
+            color: var(--forest);
         }
 
         .about-text p {
-            color: #5f5d55;
+            color: var(--muted);
             margin-bottom: 18px;
         }
 
         .products {
-            background: #eeeade;
+            background: var(--sand);
         }
 
         .product-grid {
@@ -193,9 +220,10 @@
         }
 
         .product-card {
-            background: #F9F7F0;
+            background: var(--ivory);
             padding: 40px;
-            border: 1px solid #ddd8ca;
+            border: 1px solid #D6C49B;
+            border-top: 4px solid var(--gold);
         }
 
         .product-card h3 {
@@ -203,21 +231,22 @@
             font-size: 30px;
             font-weight: 400;
             margin-bottom: 15px;
+            color: var(--forest);
         }
 
         .product-card .latin {
-            color: #9b7a32;
+            color: #94701A;
             font-style: italic;
             margin-bottom: 20px;
         }
 
         .product-card p {
-            color: #666358;
+            color: var(--muted);
         }
 
         .origin {
-            background: #10391E;
-            color: white;
+            background: var(--forest);
+            color: var(--ivory);
         }
 
         .origin-grid {
@@ -232,23 +261,28 @@
             font-size: 50px;
             font-weight: 400;
             margin: 15px 0 25px;
+            color: var(--ivory);
         }
 
         .origin p {
-            color: #d0cec4;
+            color: #E0E6D8;
             margin-bottom: 18px;
         }
 
         .origin-map {
             min-height: 420px;
             background:
-                linear-gradient(rgba(30,30,24,0.15), rgba(30,30,24,0.15)),
+                linear-gradient(
+                    rgba(16, 57, 30, 0.20),
+                    rgba(16, 57, 30, 0.20)
+                ),
                 url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80")
                 center/cover;
+            border: 2px solid var(--gold);
         }
 
         .standards {
-            background: #F9F7F0;
+            background: var(--ivory);
         }
 
         .standards-grid {
@@ -265,20 +299,21 @@
         .standard-number {
             font-family: Georgia, serif;
             font-size: 42px;
-            color: #C29322;
+            color: var(--gold);
         }
 
         .standard h3 {
             margin: 12px 0;
+            color: var(--forest);
         }
 
         .standard p {
-            color: #68665e;
+            color: var(--muted);
             font-size: 15px;
         }
 
         .contact {
-            background: #E9D8B0;
+            background: var(--sand);
         }
 
         .contact-box {
@@ -291,36 +326,61 @@
             font-family: Georgia, serif;
             font-size: 48px;
             font-weight: 400;
+            color: var(--forest);
         }
 
         .contact-box p {
-            color: #666358;
+            color: #43503F;
             margin: 20px auto;
             max-width: 600px;
         }
 
         .email {
-            color: #8c6d2c;
+            color: #795A13;
             font-size: 18px;
             text-decoration: none;
+            font-weight: 700;
+        }
+
+        .email:hover {
+            text-decoration: underline;
         }
 
         footer {
-            background: #0B2815;
-            color: #aaa79c;
+            background: var(--forest-dark);
+            color: #D5DCCF;
             text-align: center;
             padding: 35px 20px;
             font-size: 13px;
+            border-top: 3px solid var(--gold);
         }
 
         footer strong {
-            color: white;
+            color: var(--ivory);
         }
 
         @media (max-width: 800px) {
+            .nav {
+                flex-direction: column;
+                gap: 12px;
+                padding: 14px 18px;
+            }
+
+            .logo {
+                font-size: 16px;
+                text-align: center;
+            }
 
             nav {
-                display: none;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin-left: 0;
+                font-size: 12px;
             }
 
             .about-grid,
@@ -341,6 +401,14 @@
             .section-title h2,
             .contact-box h2 {
                 font-size: 38px;
+            }
+
+            .origin h2 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 16px;
             }
         }
     </style>
@@ -363,11 +431,8 @@
     </div>
 </header>
 
-
 <section class="hero">
-
     <div class="hero-content">
-
         <small>From Somaliland • To the World</small>
 
         <h1>Ancient Resin.<br>Exceptional Oil.</h1>
@@ -378,19 +443,15 @@
             cosmetic and personal-care industries.
         </p>
 
-        <a class="button" href="#contact">DISCUSS YOUR REQUIREMENTS</a>
-
+        <a class="button" href="#contact">
+            DISCUSS YOUR REQUIREMENTS
+        </a>
     </div>
-
 </section>
 
-
 <section class="about" id="about">
-
     <div class="container">
-
         <div class="section-title">
-
             <small>Who We Are</small>
 
             <h2>Botanicals from an extraordinary land.</h2>
@@ -400,16 +461,12 @@
                 ingredients company focused on sourcing and processing
                 some of the world's most distinctive frankincense.
             </p>
-
         </div>
 
-
         <div class="about-grid">
-
             <div class="about-image"></div>
 
             <div class="about-text">
-
                 <h3>Rooted in the Horn of Africa.</h3>
 
                 <p>
@@ -429,22 +486,14 @@
                     Our focus is simple: origin, quality, traceability and
                     long-term relationships with our international customers.
                 </p>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
 <section class="products" id="products">
-
     <div class="container">
-
         <div class="section-title">
-
             <small>Our Frankincense</small>
 
             <h2>Distinctive species. Distinctive origins.</h2>
@@ -453,14 +502,10 @@
                 We work with premium frankincense varieties from
                 Somaliland's key producing regions.
             </p>
-
         </div>
 
-
         <div class="product-grid">
-
             <div class="product-card">
-
                 <h3>Maydi / Meydi</h3>
 
                 <div class="latin">
@@ -473,12 +518,9 @@
                     Known for its distinctive resin profile and importance
                     in premium fragrance and botanical applications.
                 </p>
-
             </div>
 
-
             <div class="product-card">
-
                 <h3>Beeyo / Moxor</h3>
 
                 <div class="latin">
@@ -491,25 +533,16 @@
                     and Sahil. Suitable for applications across fragrance,
                     cosmetics and natural personal-care products.
                 </p>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
 <section class="origin" id="origin">
-
     <div class="container">
-
         <div class="origin-grid">
-
             <div>
-
-                <small style="letter-spacing:3px;color:#b89545;">
+                <small style="letter-spacing:3px;color:#D9B451;">
                     OUR ORIGIN
                 </small>
 
@@ -527,35 +560,23 @@
                     reliable and professional supply chain from source
                     to international buyer.
                 </p>
-
             </div>
 
             <div class="origin-map"></div>
-
         </div>
-
     </div>
-
 </section>
 
-
 <section class="standards">
-
     <div class="container">
-
         <div class="section-title">
-
             <small>Our Approach</small>
 
             <h2>Built for international buyers.</h2>
-
         </div>
 
-
         <div class="standards-grid">
-
             <div class="standard">
-
                 <div class="standard-number">01</div>
 
                 <h3>Origin</h3>
@@ -564,12 +585,9 @@
                     Direct focus on Somaliland's frankincense-producing
                     regions and their unique botanical resources.
                 </p>
-
             </div>
 
-
             <div class="standard">
-
                 <div class="standard-number">02</div>
 
                 <h3>Quality</h3>
@@ -578,12 +596,9 @@
                     Developing modern processing and quality-control
                     practices for international ingredient markets.
                 </p>
-
             </div>
 
-
             <div class="standard">
-
                 <div class="standard-number">03</div>
 
                 <h3>Partnership</h3>
@@ -592,22 +607,14 @@
                     Working with fragrance, cosmetic and personal-care
                     companies looking for distinctive natural ingredients.
                 </p>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
 <section class="contact" id="contact">
-
     <div class="container">
-
         <div class="contact-box">
-
             <h2>Let's build something exceptional.</h2>
 
             <p>
@@ -620,16 +627,11 @@
             <a class="email" href="mailto:info@hornofafricabotanicals.com">
                 info@hornofafricabotanicals.com
             </a>
-
         </div>
-
     </div>
-
 </section>
 
-
 <footer>
-
     <p>
         © 2026 <strong>Horn of Africa Botanicals</strong>.
         All rights reserved.
@@ -638,7 +640,6 @@
     <p>
         Somaliland • Horn of Africa
     </p>
-
 </footer>
 
 </body>
