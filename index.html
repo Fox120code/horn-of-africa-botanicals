@@ -56,12 +56,24 @@
             align-items: center;
         }
 
-        .logo {
+        
+       .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             font-size: 20px;
             font-weight: 700;
             letter-spacing: 1.5px;
             color: var(--forest);
         }
+
+       .logo-image {
+            width: 58px;
+            height: 58px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
 
         .logo span {
             color: var(--gold);
@@ -366,10 +378,18 @@
                 padding: 14px 18px;
             }
 
+            
             .logo {
                 font-size: 16px;
                 text-align: center;
+                justify-content: center;
             }
+
+            .logo-image {
+                 width: 46px;
+                 height: 46px;
+             }
+
 
             nav {
                 display: flex;
@@ -419,8 +439,11 @@
 <header>
     <div class="nav">
         <div class="logo">
-            HORN OF AFRICA <span>BOTANICALS</span>
-        </div>
+            <img src="weblogo.png" alt="Horn of Africa Botanicals Logo" class="logo-image">
+            <div class="logo-text">
+                 HORN OF AFRICA <span>BOTANICALS</span>
+            </div>
+         </div>
 
         <nav>
             <a href="#about">About</a>
