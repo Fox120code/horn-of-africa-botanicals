@@ -1,668 +1,105 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Horn of Africa Botanicals | Premium Frankincense</title>
-
-    <meta name="description" content="Horn of Africa Botanicals sources premium frankincense from Somaliland for international fragrance, cosmetic and personal-care markets.">
-
-    <style>
-        :root {
-            --forest: #10391E;
-            --forest-dark: #0B2815;
-            --gold: #C29322;
-            --gold-light: #D9B451;
-            --ivory: #F9F7F0;
-            --sand: #E9D8B0;
-            --text: #10391E;
-            --muted: #555E50;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: var(--text);
-            background: var(--ivory);
-            line-height: 1.6;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(249, 247, 240, 0.97);
-            border-bottom: 1px solid var(--sand);
-        }
-
-        .nav {
-            max-width: 1200px;
-            margin: auto;
-            padding: 18px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        
-       .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            color: var(--forest);
-        }
-
-       .logo-image {
-            width: 58px;
-            height: 58px;
-            object-fit: contain;
-            flex-shrink: 0;
-        }
-
-
-        .logo span {
-            color: var(--gold);
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--forest);
-            margin-left: 28px;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--gold);
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 120px 25px 80px;
-            background:
-                linear-gradient(
-                    rgba(10, 45, 23, 0.86),
-                    rgba(16, 57, 30, 0.82)
-                ),
-                url("frankincenseimage.png")
-                center/cover;
-            color: #F9F7F0;
-        }
-
-        .hero-content {
-            max-width: 850px;
-        }
-
-        .hero small {
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-size: 12px;
-            color: var(--gold-light);
-        }
-
-        .hero h1 {
-            font-family: Georgia, serif;
-            font-size: clamp(48px, 8vw, 90px);
-            line-height: 1;
-            margin: 25px 0;
-            font-weight: 400;
-            color: var(--ivory);
-        }
-
-        .hero p {
-            max-width: 650px;
-            margin: auto;
-            font-size: 19px;
-            color: #F0EBD9;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 35px;
-            padding: 15px 30px;
-            background: var(--gold);
-            color: var(--forest-dark);
-            text-decoration: none;
-            letter-spacing: 1px;
-            font-size: 13px;
-            font-weight: 700;
-            transition: background 0.3s ease;
-        }
-
-        .button:hover {
-            background: var(--gold-light);
-        }
-
-        section {
-            padding: 100px 25px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .section-title {
-            text-align: center;
-            max-width: 750px;
-            margin: 0 auto 60px;
-        }
-
-        .section-title small {
-            color: #94701A;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .section-title h2 {
-            font-family: Georgia, serif;
-            font-size: 48px;
-            font-weight: 400;
-            margin: 15px 0;
-            color: var(--forest);
-        }
-
-        .section-title p {
-            color: var(--muted);
-        }
-
-        .about {
-            background: var(--ivory);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-image {
-            min-height: 500px;
-            background:
-                linear-gradient(
-                    rgba(16, 57, 30, 0.15),
-                    rgba(16, 57, 30, 0.15)
-                ),
-                url("Rootedimage.png")
-                center/cover;
-        }
-
-        .about-text h3 {
-            font-family: Georgia, serif;
-            font-size: 36px;
-            font-weight: 400;
-            margin-bottom: 20px;
-            color: var(--forest);
-        }
-
-        .about-text p {
-            color: var(--muted);
-            margin-bottom: 18px;
-        }
-
-        .products {
-            background: var(--sand);
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .product-card {
-            background: var(--ivory);
-            padding: 40px;
-            border: 1px solid #D6C49B;
-            border-top: 4px solid var(--gold);
-        }
-
-        .product-card h3 {
-            font-family: Georgia, serif;
-            font-size: 30px;
-            font-weight: 400;
-            margin-bottom: 15px;
-            color: var(--forest);
-        }
-
-        .product-card .latin {
-            color: #94701A;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .product-card p {
-            color: var(--muted);
-        }
-
-        .origin {
-            background: var(--forest);
-            color: var(--ivory);
-        }
-
-        .origin-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .origin h2 {
-            font-family: Georgia, serif;
-            font-size: 50px;
-            font-weight: 400;
-            margin: 15px 0 25px;
-            color: var(--ivory);
-        }
-
-        .origin p {
-            color: #E0E6D8;
-            margin-bottom: 18px;
-        }
-
-        .origin-map {
-            min-height: 420px;
-            background:
-                linear-gradient(
-                    rgba(16, 57, 30, 0.20),
-                    rgba(16, 57, 30, 0.20)
-                ),
-                url("our originimage.png")
-                center/cover;
-            border: 2px solid var(--gold);
-        }
-
-        .standards {
-            background: var(--ivory);
-        }
-
-        .standards-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            text-align: center;
-        }
-
-        .standard {
-            padding: 35px 25px;
-        }
-
-        .standard-number {
-            font-family: Georgia, serif;
-            font-size: 42px;
-            color: var(--gold);
-        }
-
-        .standard h3 {
-            margin: 12px 0;
-            color: var(--forest);
-        }
-
-        .standard p {
-            color: var(--muted);
-            font-size: 15px;
-        }
-
-        .contact {
-            background: var(--sand);
-        }
-
-        .contact-box {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .contact-box h2 {
-            font-family: Georgia, serif;
-            font-size: 48px;
-            font-weight: 400;
-            color: var(--forest);
-        }
-
-        .contact-box p {
-            color: #43503F;
-            margin: 20px auto;
-            max-width: 600px;
-        }
-
-        .email {
-            color: #795A13;
-            font-size: 18px;
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        .email:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background: var(--forest-dark);
-            color: #D5DCCF;
-            text-align: center;
-            padding: 35px 20px;
-            font-size: 13px;
-            border-top: 3px solid var(--gold);
-        }
-
-        footer strong {
-            color: var(--ivory);
-        }
-
-        @media (max-width: 800px) {
-            .nav {
-                flex-direction: column;
-                gap: 12px;
-                padding: 14px 18px;
-            }
-
-            
-            .logo {
-                font-size: 16px;
-                text-align: center;
-                justify-content: center;
-            }
-
-            .logo-image {
-                 width: 46px;
-                 height: 46px;
-             }
-
-
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
-
-            nav a {
-                margin-left: 0;
-                font-size: 12px;
-            }
-
-            .about-grid,
-            .origin-grid,
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .standards-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-image,
-            .origin-map {
-                min-height: 350px;
-            }
-
-            .section-title h2,
-            .contact-box h2 {
-                font-size: 38px;
-            }
-
-            .origin h2 {
-                font-size: 40px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-        }
-    </style>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#123c2b" name="theme-color"/>
+<meta content="Horn of Africa Botanicals sources and supplies premium Somaliland frankincense resin for international buyers, while developing local essential oil distillation capabilities." name="description"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://hornofafricabotanicals.com/" rel="canonical"/>
+<meta content="website" property="og:type"/><meta content="Horn of Africa Botanicals | Frankincense from Somaliland" property="og:title"/><meta content="Premium raw frankincense resin, rooted in Somaliland. Discover our botanicals and our vision for local processing." property="og:description"/><meta content="https://hornofafricabotanicals.com/" property="og:url"/>
+<title>Horn of Africa Botanicals | Premium Frankincense from Somaliland</title>
+<link href="weblogo.png" rel="icon" type="image/png"/>
+<link as="image" href="weblogo.png" rel="preload"/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+:root{--forest:#123c2b;--deep:#09271c;--gold:#bc913e;--cream:#f8f6ef;--paper:#fffefa;--muted:#5b685e;--line:#dce3d9;--ink:#20372b}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:16px;line-height:1.75}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button{font:inherit}h1,h2,h3,p{margin-top:0}h1,h2,h3{line-height:1.18}h1,h2,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500}h1{font-size:clamp(3.15rem,6.3vw,6.1rem);letter-spacing:-.035em;max-width:780px}h2{font-size:clamp(2.25rem,4vw,4rem);letter-spacing:-.028em}h3{font-size:1.5rem}.container{width:min(1180px,calc(100% - 48px));margin:auto}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.21em;font-size:.73rem;font-weight:700}.section{padding:110px 0}.section-lead{max-width:640px;color:var(--muted);font-size:1.1rem}.header{position:sticky;top:0;z-index:20;background:rgba(255,254,250,.97);border-bottom:1px solid #e8e8df;backdrop-filter:blur(12px)}.header-inner{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand img{width:60px;height:60px;object-fit:contain}.brand-name{font-size:.88rem;line-height:1.3;font-weight:700;letter-spacing:.13em;color:var(--forest)}.brand-name span{display:block;color:#a67a2c}.nav{display:flex;align-items:center;gap:26px}.nav a{font-size:.83rem;font-weight:600;white-space:nowrap}.nav a:not(.nav-cta):hover{color:#a67a2c}.nav-cta{background:var(--forest);color:white!important;padding:12px 18px;border-radius:3px}.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:3px;padding:8px 12px;color:var(--forest);cursor:pointer}.hero{position:relative;min-height:700px;background:linear-gradient(90deg,rgba(7,32,22,.96) 0%,rgba(7,32,22,.89) 40%,rgba(7,32,22,.48) 100%),url('frankincenseimage.png') center/cover;display:flex;align-items:center;color:white;overflow:hidden}.hero:after{content:'';position:absolute;inset:auto 0 0;height:6px;background:linear-gradient(90deg,var(--gold),transparent)}.hero-content{position:relative;z-index:1;padding:110px 0}.hero h1{margin:24px 0}.hero p{font-size:1.12rem;max-width:620px;color:#ecf1e9}.hero-actions,.action-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:15px 24px;font-size:.85rem;font-weight:700;letter-spacing:.02em;border-radius:3px;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-gold{background:var(--gold);color:#10271c}.btn-outline{border:1px solid #d2dacf;color:white}.btn-dark{background:var(--forest);color:white}.btn-line{border:1px solid #aab6a9;color:var(--forest)}.trust-strip{background:#eaece3;padding:22px 0}.trust-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.trust-item{font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#46604d}.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:90px;align-items:center}.intro-copy h2{margin:18px 0 24px}.intro-copy p{color:var(--muted)}.quote-panel{background:var(--forest);padding:64px 52px;min-height:450px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}.quote-panel:before{content:'';position:absolute;border:1px solid rgba(188,145,62,.32);width:430px;height:430px;border-radius:50%;top:-180px;right:-130px}.quote-panel .eyebrow{position:relative}.quote-panel h3{font-family:'Playfair Display',Georgia,serif;color:white;font-size:clamp(2.2rem,3.5vw,3.5rem);line-height:1.23;font-weight:400;position:relative;margin:25px 0}.quote-panel p{color:#e0e8de;position:relative}.products{background:#eef0e9}.heading-row{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:38px}.heading-row h2{margin:15px 0 0}.product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.product-card{background:var(--paper);border:1px solid #e4e8df;overflow:hidden}.product-visual{height:255px;background:radial-gradient(circle at 40% 40%,#d8b56e 0%,#b38d4f 15%,#775b37 35%,#2d4631 70%);display:flex;align-items:center;justify-content:center;position:relative}.product-visual.pale{background:radial-gradient(circle at 50% 50%,#e9dcc0 0%,#d4c5a3 18%,#9c9c76 42%,#3c5947 75%)}.product-visual .resin-shape{width:120px;height:100px;transform:rotate(-16deg);border-radius:40% 55% 42% 38%;background:linear-gradient(125deg,rgba(255,245,196,.7),rgba(180,110,37,.8) 55%,rgba(81,54,20,.8));box-shadow:25px 20px 0 -8px rgba(227,179,96,.6),-40px 18px 0 -20px rgba(243,215,146,.8),0 22px 35px #182c2040}.product-visual.pale .resin-shape{background:linear-gradient(125deg,#faf0d8,#d7c49c 55%,#a99972);box-shadow:25px 20px 0 -8px #c3b08d,-40px 18px 0 -20px #f1e5c8,0 22px 35px #182c2040}.product-tag{position:absolute;top:20px;left:20px;background:#f9f7ef;color:var(--forest);padding:6px 12px;font-size:.72rem;font-weight:700;letter-spacing:.07em}.product-body{padding:32px}.product-body h3{font-family:'Playfair Display',Georgia,serif;font-size:2rem;margin:0 0 3px}.latin{font-style:italic;color:#7b7e6c;font-size:.9rem}.product-body p{color:var(--muted);margin:20px 0}.text-link{font-size:.86rem;font-weight:700;color:#936a24;border-bottom:1px solid #c7a768;padding-bottom:5px}.development{background:var(--deep);color:white}.development-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}.development h2{margin:20px 0}.development p{color:#d6e0d7}.development-art{border:1px solid #53735d;min-height:440px;display:flex;align-items:center;justify-content:center;position:relative;background:radial-gradient(circle at 50% 55%,#315d41,#103624 58%,#0b2c1d)}.development-art:before,.development-art:after{content:'';position:absolute;border:1px solid #a88a4d;border-radius:50%;width:290px;height:290px}.development-art:after{width:215px;height:215px;opacity:.6}.drop{position:relative;width:95px;height:145px;border-radius:65% 65% 70% 70%;background:linear-gradient(135deg,#f5d88e,#ba7f32 65%,#694819);transform:rotate(45deg);box-shadow:inset 14px 8px 20px #fff5,0 18px 50px #0005}.small-note{font-size:.84rem;color:#bac9b9!important}.origin{background:var(--cream)}.origin-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center}.origin-graphic{min-height:420px;background:linear-gradient(145deg,#d8d4bc,#a6ae94 50%,#456c53);padding:35px;display:flex;flex-direction:column;justify-content:end}.origin-graphic span{font-family:'Playfair Display',Georgia,serif;font-size:2.5rem;color:#fff;line-height:1.2;max-width:340px;text-shadow:0 2px 15px #16362266}.origin-copy p{color:var(--muted)}.values{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}.value{border-top:2px solid var(--gold);padding-top:20px}.value h3{font-size:1.12rem;margin:0 0 10px}.value p{font-size:.94rem;color:var(--muted)}.opportunity{background:#e8e7db;text-align:center}.opportunity .container{max-width:820px}.opportunity h2{margin:18px 0}.opportunity p{color:#536357;font-size:1.08rem}.opportunity .action-row{justify-content:center}.contact{background:var(--paper)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}.contact h2{margin:16px 0}.contact p{color:var(--muted)}.contact-panel{border:1px solid var(--line);padding:40px;background:#f8f8f2}.contact-panel label{display:block;font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:7px}.contact-panel input,.contact-panel select,.contact-panel textarea{display:block;width:100%;border:1px solid #cdd8cd;background:white;border-radius:2px;padding:12px 14px;margin-bottom:17px;font:inherit;color:var(--ink)}.contact-panel textarea{resize:vertical;min-height:110px}.contact-panel button{border:0;cursor:pointer;width:100%}.form-note{font-size:.77rem!important;margin:12px 0 0}.email-link{color:#926b26;font-weight:700;overflow-wrap:anywhere}.footer{background:#08271b;color:#e3ece2;padding:62px 0 24px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:55px}.footer p{color:#b9cbbd;font-size:.91rem;max-width:380px}.footer h3{font:700 .8rem 'DM Sans',Arial,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#d7b36d}.footer a{display:block;color:#dce7dc;font-size:.9rem;margin:9px 0}.footer-bottom{border-top:1px solid #365445;margin-top:50px;padding-top:20px;color:#b9cbbd;font-size:.78rem}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}:focus-visible{outline:3px solid #c29322;outline-offset:3px}
+@media(max-width:900px){.nav{gap:13px}.nav a{font-size:.77rem}.intro-grid,.development-grid,.origin-grid,.contact-grid{gap:40px}.section{padding:80px 0}}
+@media(max-width:720px){.container{width:min(100% - 36px,1180px)}.header-inner{min-height:75px}.brand img{width:48px;height:48px}.brand-name{font-size:.72rem}.menu-toggle{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);padding:20px 24px 25px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;box-shadow:0 20px 30px #09271c18}.nav.open{display:flex}.nav a{padding:12px 0;font-size:.95rem}.nav-cta{text-align:center;margin-top:10px}.hero{min-height:620px;background-position:60% center}.hero-content{padding:90px 0}.hero h1{font-size:clamp(2.85rem,11vw,4.4rem)}.hero p{font-size:1rem}.section{padding:68px 0}.intro-grid,.development-grid,.origin-grid,.contact-grid{grid-template-columns:1fr;gap:32px}.quote-panel{padding:42px 30px;min-height:340px}.heading-row{display:block}.product-grid,.values{grid-template-columns:1fr}.product-visual{height:210px}.development-art{min-height:290px}.origin-graphic{min-height:310px}.contact-panel{padding:25px}.footer-grid{grid-template-columns:1fr;gap:24px}.trust-inner{gap:12px}.trust-item{font-size:.66rem}.btn{padding:14px 18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Horn of Africa Botanicals","url":"https://hornofafricabotanicals.com/","logo":"https://hornofafricabotanicals.com/weblogo.png","email":"info@hornofafricabotanicals.com","description":"Somaliland-based sourcing and supply of raw frankincense resin, with essential oil distillation capabilities in development."}</script>
+<meta content="https://hornofafricabotanicals.com/frankincenseimage.png" property="og:image"/><meta content="light" name="color-scheme"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><style>
+/* Premium editorial refinement — October 2026 */
+:root{--forest:#10391e;--deep:#0b2815;--gold:#c29322;--cream:#f9f7f0;--paper:#fffdf8;--muted:#46594c;--ink:#1b3023}
+body{line-height:1.8;-webkit-font-smoothing:antialiased}
+h1,h2,.serif{font-weight:400}h1{line-height:1.08;letter-spacing:-.045em}h2{line-height:1.17}
+.header{box-shadow:0 2px 24px rgba(10,30,18,.045)}.brand img{width:56px;height:56px}.brand-name{letter-spacing:.16em}
+.hero{min-height:760px;background-image:linear-gradient(90deg,rgba(7,30,19,.97) 0%,rgba(7,30,19,.88) 43%,rgba(7,30,19,.33) 100%),url('frankincenseimage.png')}
+.hero .eyebrow{color:#e4c37d}.hero h1{max-width:900px}.hero p{max-width:570px;line-height:1.85}
+.btn{min-height:50px;letter-spacing:.04em}.btn-gold{background:#d5aa55}.btn-gold:hover{background:#e4bc70}
+.section{padding:125px 0}.eyebrow{letter-spacing:.22em}.section-lead{line-height:1.85}
+.quote-panel{background:linear-gradient(140deg,#123b26,#0b2815);border:1px solid #42684c}
+.product-card{transition:transform .3s ease,box-shadow .3s ease}.product-card:hover{transform:translateY(-5px);box-shadow:0 20px 42px #15391e16}
+.product-body{padding:38px}.product-body p{min-height:90px}
+.origin-graphic{background:linear-gradient(145deg,#213e2c77,#142a1cbb),url('frankincenseimage.png') center/cover}
+.contact-panel{box-shadow:0 18px 45px #15391e0d}.contact-panel input:focus,.contact-panel select:focus,.contact-panel textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+.process-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:42px}
+.process-step{border-top:1px solid #c6b27b;padding:24px 8px 0 0}.process-step b{display:block;font:400 1.45rem 'Playfair Display',Georgia,serif;color:var(--forest);margin-bottom:9px}.process-step p{font-size:.94rem;color:var(--muted)}
+.buyer-note{margin-top:32px;padding:22px 25px;background:#f3f1e7;border-left:3px solid var(--gold);color:var(--ink);font-size:.93rem}
+@media(max-width:800px){.section{padding:78px 0}.hero{min-height:650px}.process-steps{grid-template-columns:1fr;gap:6px}.product-body p{min-height:0}.brand img{width:46px;height:46px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.product-card{transition:none}}
+</style><style>/* Larger brand mark and editorial botanical stories */
+.header .brand img{width:76px;height:76px;flex-shrink:0}
+.header .header-inner{min-height:98px}
+.header .brand{gap:13px}
+.header .brand-name{font-size:.82rem;letter-spacing:.13em}
+.products .product-body h3{font-size:1.5rem;line-height:1.35;margin-bottom:9px}
+.products .product-body p{min-height:0;line-height:1.78}
+.products .product-body .latin{margin-bottom:18px}
+@media(max-width:900px){.header .brand img{width:64px;height:64px}.header .brand-name{font-size:.72rem}}
+@media(max-width:720px){.header .header-inner{min-height:82px}.header .brand img{width:61px;height:61px}.header .brand-name{font-size:.68rem;letter-spacing:.09em}.header .brand{gap:9px}}
+@media(max-width:380px){.header .brand img{width:54px;height:54px}.header .brand-name{font-size:.61rem}}
+</style><style>
+/* Our Botanicals: original tree photograph as the section background */
+.products{
+  background-image:linear-gradient(90deg,rgba(8,32,20,.82),rgba(8,32,20,.56)),url('botanicals-tree.jpg');
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+.products .eyebrow{color:#e7c67e}
+.products .heading-row h2,.products .heading-row .section-lead{color:#fffdf8}
+.products .product-card{background:rgba(255,253,248,.97)}
+@media(max-width:720px){.products{background-position:55% center}}
+/* Actual resin product photography */
+.product-visual{height:290px;display:block;background:#eae3d5;overflow:hidden}
+.product-visual img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.product-visual .product-tag{z-index:1}
+@media(max-width:720px){.product-visual{height:235px}}
+/* Real photographic illustration for Beyond the Resin */
+.development-photo{overflow:hidden;border:1px solid rgba(194,147,34,.45);background:#173a29;min-height:380px;display:flex;align-items:center}
+.development-photo img{display:block;width:100%;height:100%;min-height:380px;object-fit:cover;object-position:center;aspect-ratio:1.18/1}
+@media(max-width:720px){.development-photo,.development-photo img{min-height:245px}.development-photo img{aspect-ratio:1.5/1}}
+.hp-field{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}.form-status{min-height:1.5em;font-size:.91rem!important;font-weight:600}.form-status.success{color:#17663b}.form-status.error{color:#a52d24}.contact-panel button:disabled{opacity:.65;cursor:wait}
+</style></head>
 <body>
-
-<header>
-    <div class="nav">
-        <div class="logo">
-            <img src="weblogo.png" alt="Horn of Africa Botanicals Logo" class="logo-image">
-            <div class="logo-text">
-                 HORN OF AFRICA <span>BOTANICALS</span>
-            </div>
-         </div>
-
-        <nav>
-            <a href="#about">About</a>
-            <a href="#products">Frankincense</a>
-            <a href="#origin">Our Origin</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-</header>
-
-<section class="hero">
-    <div class="hero-content">
-        <small>From Somaliland • To the World</small>
-
-        <h1>Ancient Resin.<br>Exceptional Oil.</h1>
-
-        <p>
-            Premium frankincense sourced from the mountains and forests
-            of the Horn of Africa, prepared for the global fragrance,
-            cosmetic and personal-care industries.
-        </p>
-
-        <a class="button" href="#contact">
-            DISCUSS YOUR REQUIREMENTS
-        </a>
-    </div>
-</section>
-
-<section class="about" id="about">
-    <div class="container">
-        <div class="section-title">
-            <small>Who We Are</small>
-
-            <h2>Botanicals from an extraordinary land.</h2>
-
-            <p>
-                Horn of Africa Botanicals is a Somaliland-based botanical
-                ingredients company focused on sourcing and processing
-                some of the world's most distinctive frankincense.
-            </p>
-        </div>
-
-        <div class="about-grid">
-            <div class="about-image"></div>
-
-            <div class="about-text">
-                <h3>Rooted in the Horn of Africa.</h3>
-
-                <p>
-                    For generations, frankincense has been harvested from
-                    the rugged landscapes of Somaliland and the wider Horn
-                    of Africa.
-                </p>
-
-                <p>
-                    We are building a modern supply chain around this
-                    heritage — connecting exceptional natural raw materials
-                    with international buyers seeking distinctive botanical
-                    ingredients.
-                </p>
-
-                <p>
-                    Our focus is simple: origin, quality, traceability and
-                    long-term relationships with our international customers.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="products" id="products">
-    <div class="container">
-        <div class="section-title">
-            <small>Our Frankincense</small>
-
-            <h2>Distinctive species. Distinctive origins.</h2>
-
-            <p>
-                We work with premium frankincense varieties from
-                Somaliland's key producing regions.
-            </p>
-        </div>
-
-        <div class="product-grid">
-            <div class="product-card">
-                <h3>Maydi / Meydi</h3>
-
-                <div class="latin">
-                    Boswellia frereana
-                </div>
-
-                <p>
-                    A highly valued Somaliland frankincense traditionally
-                    associated with the Sanaag and Cal Madow regions.
-                    Known for its distinctive resin profile and importance
-                    in premium fragrance and botanical applications.
-                </p>
-            </div>
-
-            <div class="product-card">
-                <h3>Beeyo / Moxor</h3>
-
-                <div class="latin">
-                    Boswellia carterii / sacra
-                </div>
-
-                <p>
-                    Traditional frankincense sourced from producing areas
-                    across Somaliland, including regions of Bari, Sanaag
-                    and Sahil. Suitable for applications across fragrance,
-                    cosmetics and natural personal-care products.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="origin" id="origin">
-    <div class="container">
-        <div class="origin-grid">
-            <div>
-                <small style="letter-spacing:3px;color:#D9B451;">
-                    OUR ORIGIN
-                </small>
-
-                <h2>Somaliland.<br>The source matters.</h2>
-
-                <p>
-                    Our raw materials originate from the natural landscapes
-                    of Somaliland, where frankincense trees have been
-                    harvested for centuries.
-                </p>
-
-                <p>
-                    We believe the story of a botanical ingredient begins
-                    with its origin. Our goal is to build a transparent,
-                    reliable and professional supply chain from source
-                    to international buyer.
-                </p>
-            </div>
-
-            <div class="origin-map"></div>
-        </div>
-    </div>
-</section>
-
-<section class="standards">
-    <div class="container">
-        <div class="section-title">
-            <small>Our Approach</small>
-
-            <h2>Built for international buyers.</h2>
-        </div>
-
-        <div class="standards-grid">
-            <div class="standard">
-                <div class="standard-number">01</div>
-
-                <h3>Origin</h3>
-
-                <p>
-                    Direct focus on Somaliland's frankincense-producing
-                    regions and their unique botanical resources.
-                </p>
-            </div>
-
-            <div class="standard">
-                <div class="standard-number">02</div>
-
-                <h3>Quality</h3>
-
-                <p>
-                    Developing modern processing and quality-control
-                    practices for international ingredient markets.
-                </p>
-            </div>
-
-            <div class="standard">
-                <div class="standard-number">03</div>
-
-                <h3>Partnership</h3>
-
-                <p>
-                    Working with fragrance, cosmetic and personal-care
-                    companies looking for distinctive natural ingredients.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="contact" id="contact">
-    <div class="container">
-        <div class="contact-box">
-            <h2>Let's build something exceptional.</h2>
-
-            <p>
-                We welcome enquiries from fragrance houses, cosmetic
-                manufacturers, ingredient distributors and other
-                international buyers interested in Somaliland
-                frankincense and botanical ingredients.
-            </p>
-
-            <a class="email" href="mailto:info@hornofafricabotanicals.com">
-                info@hornofafricabotanicals.com
-            </a>
-        </div>
-    </div>
-</section>
-
-<footer style="text-align: center; padding: 32px 20px;">
-    <p style="margin: 0; font-size: 16px; line-height: 1.8; letter-spacing: 0.2px;">
-        © 2026 <strong>Horn of Africa Botanicals</strong>.
-    </p>
-
-    <p style="margin: 4px 0 0; font-size: 14px; color: #E9D8B0; line-height: 1.6;">
-        All rights reserved.
-    </p>
-</footer>
-
-</body>
-</html>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="header"><div class="container header-inner"><a aria-label="Horn of Africa Botanicals homepage" class="brand" href="#top"><img alt="Horn of Africa Botanicals logo" decoding="async" height="60" src="weblogo.png" width="60"/><span class="brand-name">HORN OF AFRICA<span>BOTANICALS</span></span></a><button aria-controls="mainNav" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" id="menuToggle">☰ Menu</button><nav aria-label="Main navigation" class="nav" id="mainNav"><a href="#about">Our Story</a><a href="#botanicals">Frankincense</a><a href="#processing">Processing &amp; Innovation</a><a href="#origin">Our Origin</a><a href="#sourcing">Supply</a><a class="nav-cta" href="#contact">Get in Touch ↗</a></nav></div></header>
+<main id="main"><section class="hero" id="top"><div class="container hero-content"><div class="eyebrow">From Somaliland to the world</div><h1>Rooted in Origin.<br/>Inspired by Possibility.</h1><p>Distinctive frankincense from the landscapes of Somaliland. Thoughtfully sourced for international markets, with a vision that reaches beyond the resin.</p><div class="hero-actions"><a class="btn btn-gold" href="#botanicals">Explore Our Frankincense <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#contact">Start a Conversation <span aria-hidden="true">↗</span></a></div></div></section>
+<div class="trust-strip"><div class="container trust-inner"><span class="trust-item">Somaliland Origin</span><span class="trust-item">Raw Resin Supply</span><span class="trust-item">International Enquiries</span><span class="trust-item">Future-Focused Processing</span></div></div>
+<section class="section" id="about"><div class="container intro-grid"><div class="intro-copy"><div class="eyebrow">Who we are</div><h2>Exceptional botanicals begin with a meaningful connection to their source.</h2><p>Horn of Africa Botanicals is a Somaliland-based company focused on sourcing and supplying natural frankincense resin to international buyers.</p><p>Our work is grounded in an appreciation for the region's distinctive botanical resources and the people and landscapes behind them. We aim to connect this heritage with today's global fragrance, cosmetic and natural ingredients industries.</p><p>As our business develops, we are looking beyond raw materials to the possibilities of local processing, new applications and lasting industry relationships.</p><a class="text-link" href="#origin">Discover our origin ↗</a></div><div class="quote-panel"><div class="eyebrow">Our perspective</div><h3>What begins in nature can become something extraordinary.</h3><p>Connecting the character of Somaliland's frankincense with the possibilities of tomorrow.</p></div></div></section>
+<section class="section" id="sourcing" style="background:#fffdf8"><div class="container"><div class="eyebrow">Working with international buyers</div><h2 style="max-width:800px;margin:18px 0 20px">A considered approach to frankincense supply.</h2><p class="section-lead">From identifying the right resin to discussing quantity and destination, we believe strong supply relationships begin with clear communication and attention to origin.</p><div class="process-steps"><div class="process-step"><b>01 — Explore</b><p>Tell us which resin interests you and the intended application or market.</p></div><div class="process-step"><b>02 — Specify</b><p>We discuss available grades, volumes, requirements and relevant documentation for your enquiry.</p></div><div class="process-step"><b>03 — Connect</b><p>We work through practical supply and shipping arrangements appropriate to your destination.</p></div></div><div class="buyer-note"><strong>Raw frankincense resin:</strong> sourcing and international supply enquiries are welcome. Essential oils remain a future offering while distillation facilities are being established.</div></div></section><section class="section products" id="botanicals"><div class="container"><div class="heading-row"><div><div class="eyebrow">Our botanicals</div><h2>Frankincense with a story to tell.</h2></div><p class="section-lead">Two remarkable resins. Centuries of tradition. Discover the character, landscape and heritage behind each one.</p></div><div class="product-grid"><article class="product-card"><div class="product-visual"><img src="Maydi.png" alt="Golden Maydi frankincense resin pieces" loading="lazy" decoding="async" width="340" height="255"/><span class="product-tag">RAW RESIN · ENQUIRIES WELCOME</span></div><div class="product-body"><h3>Maydi — The King of Frankincense</h3><div class="latin">Boswellia frereana</div><p>High on Somaliland’s rugged limestone cliffs grows one of the world’s most distinctive frankincense trees. Known as the King of Frankincense, Maydi has been treasured for generations for its rich, balsamic fragrance and bright citrus notes. Its extraordinary character begins in a landscape few trees can call home.</p><a class="text-link" href="mailto:info@hornofafricabotanicals.com?subject=Maydi%20Raw%20Resin%20Enquiry">Enquire about Maydi ↗</a></div></article><article class="product-card"><div class="product-visual"><img src="Beeyo.png" alt="Pale golden Beeyo frankincense resin pieces" loading="lazy" decoding="async" width="678" height="452"/><span class="product-tag">RAW RESIN · ENQUIRIES WELCOME</span></div><div class="product-body"><h3>Beeyo — An Ancient Aromatic Treasure</h3><div class="latin">Boswellia carterii / sacra</div><p>For thousands of years, frankincense has travelled ancient trade routes, filling temples and homes with its unmistakable fragrance. Harvested from the dry landscapes of the Horn of Africa, Beeyo carries that legacy forward with warm, resinous notes, gentle spice and fresh pine.</p><a class="text-link" href="mailto:info@hornofafricabotanicals.com?subject=Beeyo%20Raw%20Resin%20Enquiry">Enquire about Beeyo ↗</a></div></article></div><p style="margin-top:24px;color:#657365;font-size:.86rem">Product visuals are illustrative. Species identification, grading, quantity and shipping arrangements are confirmed for each enquiry.</p></div></section>
+<section class="section development" id="processing"><div class="container development-grid"><div><div class="eyebrow">Beyond the resin</div><h2>A new chapter in botanical processing.</h2><p>Frankincense has travelled from this region to the wider world for generations. We believe its next chapter can create more value closer to where it begins.</p><p>Horn of Africa Botanicals is in the process of establishing frankincense distillation capabilities in Somaliland, with the aim of producing essential oils for international botanical applications.</p><p>Our longer-term outlook embraces thoughtful processing, product development and the exchange of knowledge that makes new possibilities achievable.</p><p class="small-note">Essential oil production is in development and is not currently offered for sale.</p><a class="btn btn-outline" href="#contact">Explore a Conversation ↗</a></div><div class="development-photo"><img src="frankincense-oil.jpg" alt="Illustrative arrangement of essential oil dropper bottles and frankincense resin" loading="lazy" decoding="async" width="1408" height="768" /></div></div></section>
+<section class="section origin" id="origin"><div class="container origin-grid"><div class="origin-graphic"><span>Somaliland.<br/>Our origin, our inspiration.</span></div><div class="origin-copy"><div class="eyebrow">Our origin</div><h2>Shaped by the land. Connected to the world.</h2><p>Somaliland's dry landscapes and rugged highlands are home to frankincense traditions with deep regional roots. For centuries, natural resins have connected communities here with markets far beyond the Horn of Africa.</p><p>We see origin as more than a location. It is an important part of product identity, sourcing knowledge and the relationships that connect natural materials to the people who value them.</p><div class="values"><div class="value"><h3>Origin</h3><p>A clear connection to Somaliland's frankincense landscape.</p></div><div class="value"><h3>Purpose</h3><p>Bringing distinctive raw materials to international buyers.</p></div><div class="value"><h3>Possibility</h3><p>Developing the next chapter of local botanical value.</p></div></div></div></div></section>
+<section class="section opportunity"><div class="container"><div class="eyebrow">Where heritage meets opportunity</div><h2>Great possibilities begin at the source.</h2><p>The future of botanical ingredients is shaped not only by what nature provides, but by what expertise, curiosity and shared ambition can create. We welcome conversations that connect distinctive ingredients with fresh thinking and long-term possibilities.</p><div class="action-row"><a class="btn btn-dark" href="#contact">Connect With Us ↗</a></div></div></section>
+<section class="section contact" id="contact"><div class="container contact-grid"><div><div class="eyebrow">Get in touch</div><h2>Let's begin a conversation.</h2><p>Whether you're exploring raw frankincense supply, researching botanical ingredients or interested in what comes next, we'd be pleased to hear from you.</p><p><strong>Business enquiries</strong><br/><a class="email-link" href="mailto:info@hornofafricabotanicals.com">info@hornofafricabotanicals.com</a></p><p><strong>Based in</strong><br/>Somaliland</p><p style="font-size:.88rem">For raw resin enquiries, please include the resin type, intended quantity, destination country and any relevant specifications.</p></div><form class="contact-panel" id="enquiryForm" method="post" action="/api/enquiry"><h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.8rem">Send an enquiry</h3><p style="font-size:.86rem">Send your enquiry directly to our team. We will respond by email.</p><label for="name">Your name</label><input autocomplete="name" id="name" name="name" placeholder="Full name" required=""/><label for="company">Company</label><input autocomplete="organization" id="company" name="company" placeholder="Company name"/><label for="email">Email address</label><input autocomplete="email" id="email" name="email" placeholder="you@company.com" required="" type="email"/><label for="interest">I'm interested in</label><select id="interest" name="interest"><option>Raw frankincense resin</option><option>Future essential oil production</option><option>Industry collaboration</option><option>General enquiry</option></select><label for="destination">Destination country</label><input autocomplete="country-name" id="destination" name="destination" placeholder="Country for delivery"/><label for="quantity">Estimated quantity (optional)</label><input id="quantity" name="quantity" placeholder="e.g. 100 kg, 1 tonne, or to be discussed"/><label for="message">Your message</label><textarea id="message" name="message" placeholder="Tell us about your enquiry, quantity and destination where relevant" required=""></textarea><div class="hp-field" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"/></div><button class="btn btn-dark" id="enquirySubmit" type="submit">Send Enquiry ↗</button><p id="enquiryStatus" class="form-status" role="status" aria-live="polite"></p><p class="form-note">Your details will only be used to respond to your enquiry. Please do not include sensitive personal information.</p></form></div></section></main>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="brand" style="margin-bottom:18px"><img alt="" height="60" loading="lazy" src="weblogo.png" width="60"/><span class="brand-name" style="color:white">HORN OF AFRICA<span>BOTANICALS</span></span></div><p>Rooted in Somaliland. Connecting exceptional frankincense with international markets and new possibilities.</p></div><div><h3>Explore</h3><a href="#about">Our Story</a><a href="#botanicals">Our Frankincense</a><a href="#processing">Processing &amp; Innovation</a><a href="#origin">Our Origin</a></div><div><h3>Connect</h3><a href="mailto:info@hornofafricabotanicals.com">Email Our Team</a><a href="#contact">Business Enquiries</a><p>Somaliland</p></div></div><div class="footer-bottom">© <span id="year">2026</span> Horn of Africa Botanicals. All rights reserved.</div></div></footer>
+<script>
+const toggle=document.getElementById('menuToggle'),nav=document.getElementById('mainNav');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕ Close':'☰ Menu'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰ Menu'}));document.getElementById('year').textContent=new Date().getFullYear();document.getElementById('enquiryForm').addEventListener('submit',async function(e){
+ e.preventDefault();
+ const form=this,button=document.getElementById('enquirySubmit'),status=document.getElementById('enquiryStatus');
+ if(!form.reportValidity())return;
+ button.disabled=true;button.textContent='Sending…';status.className='form-status';status.textContent='Sending your enquiry…';
+ try{
+  const response=await fetch('/api/enquiry',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+  let result={};try{result=await response.json()}catch(_){}
+  if(!response.ok||!result.ok)throw new Error(result.error||'Your enquiry could not be sent. Please try again.');
+  status.className='form-status success';status.textContent='Thank you. Your enquiry has been sent to our team.';form.reset();
+ }catch(err){status.className='form-status error';status.textContent=(location.protocol==='file:'?'Direct sending works only on the deployed website. Please email info@hornofafricabotanicals.com.':err.message+' You can also email info@hornofafricabotanicals.com.');}
+ finally{button.disabled=false;button.textContent='Send Enquiry ↗';}
+});
+</script>
+</body></html>
