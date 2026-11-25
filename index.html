@@ -154,7 +154,30 @@ h1,h2,.serif{font-weight:400}h1{line-height:1.08;letter-spacing:-.045em}h2{line-
 
 .btn,.text-link,.nav-cta{font-variant-emoji:text}
 
-</style></head>
+</style>
+<style>
+/* Refined corporate footer */
+.footer{padding:78px 0 26px;border-top:2px solid var(--gold)}
+.footer-grid{grid-template-columns:1.25fr .8fr 1.2fr;gap:64px;align-items:start}
+.footer .footer-brand{display:flex;align-items:center;gap:12px;margin:0 0 24px}
+.footer-brand img{width:76px;height:76px;flex-shrink:0}
+.footer-brand .brand-name{color:#fff;font-size:.85rem;word-spacing:.3em}
+.footer-brand .brand-name span{color:#d7b36d}
+.footer .footer-tagline{font-family:'Playfair Display',Georgia,serif;font-size:1.55rem;line-height:1.4;color:#f8f6ef;margin-bottom:16px}
+.footer h3{margin:12px 0 24px;letter-spacing:.18em}
+.footer a{overflow-wrap:anywhere;transition:color .2s}
+.footer a:hover{color:#e4c37d}
+.footer address{font-style:normal;font-size:.9rem;color:#b9cbbd;line-height:1.8;margin-bottom:20px}
+.footer address strong{color:#f8f6ef;font-weight:600}
+.footer-contact{margin-top:18px}
+.footer-contact>span{display:block;color:#d7b36d;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600}
+.footer-contact a{margin:4px 0}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:55px}
+.footer-bottom a{font-size:.78rem;margin:0}
+@media(max-width:900px){.footer-grid{gap:30px}}
+@media(max-width:720px){.footer{padding:48px 0 24px}.footer-grid{grid-template-columns:1fr;gap:30px}.footer h3{margin:0 0 16px}.footer-bottom{margin-top:32px}.footer-brand img{width:64px;height:64px}}
+</style>
+</head>
 
 <body>
 
@@ -176,36 +199,13 @@ h1,h2,.serif{font-weight:400}h1{line-height:1.08;letter-spacing:-.045em}h2{line-
 
 <section class="section opportunity"><div class="container"><div class="eyebrow">Where heritage meets opportunity</div><h2>Great possibilities begin at the source.</h2><p>The future of botanical ingredients is shaped not only by what nature provides, but by what expertise, curiosity and shared ambition can create. We welcome conversations that connect distinctive ingredients with fresh thinking and long-term possibilities.</p><div class="action-row"><a class="btn btn-dark" href="#contact">Connect With Us <svg class="arrow-icon" aria-hidden="true" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5M7 5h12v12"/></svg></a></div></div></section>
 
-<section class="section contact" id="contact"><div class="container contact-grid"><div><div class="eyebrow">Get in touch</div><h2>Let's begin a conversation.</h2><p>Whether you’re exploring raw frankincense supply, researching botanical ingredients or seeking a wholesale partnership, we’d be pleased to hear from you.</p><p><strong>Business enquiries</strong><br/><a class="email-link" href="mailto:info@cornuafricaebotanicals.com">info@cornuafricaebotanicals.com</a></p>
-<p>
-  <strong>Based in</strong><br/>
-  Jigjiga-Yar Road, Hargeisa,<br/>
-  Maroodi Jeex, Somaliland
-</p>
+<section class="section contact" id="contact"><div class="container contact-grid"><div><div class="eyebrow">Get in touch</div><h2>Let's begin a conversation.</h2><p>We welcome enquiries from international buyers, distributors, manufacturers and industry partners seeking premium natural frankincense resin.</p><p>For wholesale enquiries, please include your preferred resin type, estimated quantity, destination country and any relevant specifications.</p><p><strong>Business enquiries</strong><br/><a class="email-link" href="mailto:info@cornuafricaebotanicals.com">info@cornuafricaebotanicals.com</a></p></div><form class="contact-panel" id="enquiryForm" method="post" action="/api/enquiry"><h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.8rem">Send an enquiry</h3><p style="font-size:.86rem">Send your enquiry directly to our team. We will respond by email.</p><label for="name">Your name</label><input autocomplete="name" id="name" name="name" placeholder="Full name" required=""/><label for="company">Company</label><input autocomplete="organization" id="company" name="company" placeholder="Company name"/><label for="email">Email address</label><input autocomplete="email" id="email" name="email" placeholder="you@company.com" required="" type="email"/><label for="interest">I'm interested in</label><select id="interest" name="interest"><option>Raw frankincense resin</option><option>Wholesale &amp; distribution partnership</option><option>Industry collaboration</option><option>General enquiry</option></select><label for="resinType">Frankincense type</label><select id="resinType" name="resinType"><option value="">Please select</option><option value="Maydi - Boswellia frereana">Maydi - Boswellia frereana</option><option value="Beeyo - Boswellia carterii / sacra">Beeyo - Boswellia carterii / sacra</option><option value="Multiple resins">Multiple resins</option></select><label for="grade">Preferred grade / requirements</label><input id="grade" name="grade" placeholder="Colour, size, or please advise"/><label for="destination">Destination country</label><input autocomplete="country-name" id="destination" name="destination" placeholder="Country for delivery"/><label for="quantity">Estimated quantity (optional)</label><input id="quantity" name="quantity" placeholder="e.g. 100 kg, 1 tonne, or to be discussed"/><label for="message">Your message</label><textarea id="message" name="message" placeholder="Tell us about your enquiry, quantity and destination where relevant" required=""></textarea><div class="hp-field" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"/></div><button class="btn btn-dark" id="enquirySubmit" type="submit">Send Enquiry <svg class="arrow-icon" aria-hidden="true" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5M7 5h12v12"/></svg></button><p id="enquiryStatus" class="form-status" role="status" aria-live="polite"></p><p class="form-note">Your details will only be used to respond to your enquiry. Please do not include sensitive personal information.</p></form></div></section></main>
 
-<p>
-  <strong>Phone / WhatsApp</strong><br/>
-  <a href="tel:+252639357446" class="email-link">
-    +252 63 9357446
-  </a>
-  <a href="https://wa.me/252636643816"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Chat with Cornu Africae Botanicals on WhatsApp"
-     style="display:inline-flex;vertical-align:middle;margin-left:12px;color:#25D366">
-    <svg xmlns="http://www.w3.org/2000/svg"
-         width="25" height="25" viewBox="0 0 24 24"
-         fill="none" stroke="currentColor" stroke-width="1.8"
-         stroke-linecap="round" stroke-linejoin="round"
-         aria-hidden="true">
-      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-      <path d="M9 8.5c.5 3 2 4.5 5.5 6l1.5-1.5"/>
-    </svg>
-  </a>
-</p>
-<p style="font-size:.88rem">For raw resin enquiries, please include the resin type, intended quantity, destination country and any relevant specifications.</p></div><form class="contact-panel" id="enquiryForm" method="post" action="/api/enquiry"><h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.8rem">Send an enquiry</h3><p style="font-size:.86rem">Send your enquiry directly to our team. We will respond by email.</p><label for="name">Your name</label><input autocomplete="name" id="name" name="name" placeholder="Full name" required=""/><label for="company">Company</label><input autocomplete="organization" id="company" name="company" placeholder="Company name"/><label for="email">Email address</label><input autocomplete="email" id="email" name="email" placeholder="you@company.com" required="" type="email"/><label for="interest">I'm interested in</label><select id="interest" name="interest"><option>Raw frankincense resin</option><option>Wholesale &amp; distribution partnership</option><option>Industry collaboration</option><option>General enquiry</option></select><label for="resinType">Frankincense type</label><select id="resinType" name="resinType"><option value="">Please select</option><option value="Maydi - Boswellia frereana">Maydi - Boswellia frereana</option><option value="Beeyo - Boswellia carterii / sacra">Beeyo - Boswellia carterii / sacra</option><option value="Multiple resins">Multiple resins</option></select><label for="grade">Preferred grade / requirements</label><input id="grade" name="grade" placeholder="Colour, size, or please advise"/><label for="destination">Destination country</label><input autocomplete="country-name" id="destination" name="destination" placeholder="Country for delivery"/><label for="quantity">Estimated quantity (optional)</label><input id="quantity" name="quantity" placeholder="e.g. 100 kg, 1 tonne, or to be discussed"/><label for="message">Your message</label><textarea id="message" name="message" placeholder="Tell us about your enquiry, quantity and destination where relevant" required=""></textarea><div class="hp-field" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"/></div><button class="btn btn-dark" id="enquirySubmit" type="submit">Send Enquiry <svg class="arrow-icon" aria-hidden="true" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5M7 5h12v12"/></svg></button><p id="enquiryStatus" class="form-status" role="status" aria-live="polite"></p><p class="form-note">Your details will only be used to respond to your enquiry. Please do not include sensitive personal information.</p></form></div></section></main>
-
-<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="brand" style="margin-bottom:18px"><img alt="" height="60" loading="lazy" src="weblogo.png" width="60"/><span class="brand-name" style="color:white">CORNU AFRICAE<span>BOTANICALS</span></span></div><p>Rooted in Somaliland. Connecting exceptional frankincense with international markets and new possibilities.</p></div><div><h3>Explore</h3><a href="#about">Our Story</a><a href="#botanicals">Our Frankincense</a><a href="#commitment">Our Commitment</a><a href="#origin">Our Origin</a></div><div><h3>Connect</h3><a href="mailto:info@cornuafricaebotanicals.com">Email Our Team</a><a href="#contact">Business Enquiries</a><p>Somaliland</p></div></div><div class="footer-bottom">© <span id="year">2026</span> Cornu Africae Botanicals. All rights reserved.</div></div></footer>
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div><a class="brand footer-brand" href="#top" aria-label="Cornu Africae Botanicals homepage"><img alt="" height="76" loading="lazy" src="weblogo.png" width="76"/><span class="brand-name">CORNU&nbsp;AFRICAE<span>BOTANICALS</span></span></a><p class="footer-tagline">Rooted in Somaliland.<br/>Connected to the world.</p><p>Premium raw frankincense resin for international buyers, manufacturers and wholesale partners.</p></div>
+<nav aria-label="Footer navigation"><h3>Explore</h3><a href="#about">Our Story</a><a href="#botanicals">Our Frankincense</a><a href="#commitment">Our Commitment</a><a href="#origin">Our Origin</a><a href="#sourcing">Supply &amp; Partnerships</a></nav>
+<div><h3>Contact &amp; Enquiries</h3><address><strong>Hargeisa Office</strong><br/>Jigjiga-Yar Road, Hargeisa<br/>Maroodi Jeex, Somaliland</address><div class="footer-contact"><span>Business enquiries</span><a href="mailto:info@cornuafricaebotanicals.com">info@cornuafricaebotanicals.com</a></div><div class="footer-contact"><span>Phone</span><a href="tel:+252639357446">+252 63 9357446</a><a href="https://wa.me/252636643816" target="_blank" rel="noopener noreferrer">Chat on WhatsApp <span aria-hidden="true">↗</span></a></div></div>
+</div><div class="footer-bottom"><span>© <span id="year">2026</span> Cornu Africae Botanicals. All rights reserved.</span><a href="#top">Back to top ↑</a></div></div></footer>
 
 <script>
 
