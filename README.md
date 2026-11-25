@@ -1,1 +1,1 @@
-# horn-of-africa-botanicals
+# Cornu-africae-botanicals
