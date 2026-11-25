@@ -2,7 +2,7 @@
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}});
 const clean=(value,max)=>typeof value==='string'?value.trim().slice(0,max):'';
 const emailValid=value=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)&&value.length<=254;
-const allowedInterests=new Set(['Raw frankincense resin','Future essential oil production','Industry collaboration','General enquiry']);
+const allowedInterests=new Set(['Raw frankincense resin','Wholesale & distribution partnership','Industry collaboration','General enquiry']);
 export async function onRequestPost({request,env}){
  try{
   const origin=request.headers.get('Origin');
